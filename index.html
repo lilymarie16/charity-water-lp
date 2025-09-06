@@ -1,47 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>charity: water | Be Part of the Change</title>
+  <!-- Add Google Fonts fallback for Proxima Nova -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <style>
+    /* Set a blue background for the whole page */
+    body {
+      background-color: #8BD1CB; /* Light Blue - matches colors from the photo */
+      font-family: 'Proxima Nova', Montserrat, Arial, sans-serif; /* Use Proxima Nova, fallback to Montserrat/Arial */
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Center the main box on the page */
+    .container {
+      background-color: #FFC907; /* Yellow */
+      max-width: 800px; /* Make the box wider */
+      margin: 32px auto; /* Slightly less margin for more height */
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      overflow: hidden;
+      font-family: 'Proxima Nova', Montserrat, Arial, sans-serif;
+      width: 90%; /* Allow the box to expand more on large screens */
+    }
+
+    /* Add an image at the top */
+    .image-section {
+      width: 100%;
+      height: 420px; /* Increased height for a bigger image */
+      /* Use the image from the img folder */
+      background-image: url('img/4408_Ethiopia_2019_CG-.jpg');
+      background-size: contain; /* Show the whole image without cropping */
+      background-repeat: no-repeat; /* Prevent the image from repeating */
+      background-position: center;
+      background-color: #2E9DF7; /* Blue fallback behind the image */
+    }
+
+    /* Content section with text and button */
+    .content-section {
+      background: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      font-family: 'Proxima Nova', Montserrat, Arial, sans-serif;
+    }
+
+    /* Charity brand name */
+    .brand {
+      color: #FFC907; /* Yellow */
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    /* Main heading */
+    h1 {
+      color: #2E9DF7; /* Blue */
+      font-size: 2rem;
+      margin: 15px 0;
+    }
+
+    /* Description paragraph */
+    p {
+      color: #333;
+      font-size: 1rem;
+      margin-bottom: 25px;
+    }
+
+    /* Donate button styling */
+    .donate-btn {
+      background-color: #FFC907; /* Yellow */
+      color: #000;
+      font-weight: bold;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      display: inline-block;
+    }
+
+    .donate-btn:hover {
+      background-color: #2E9DF7; /* Blue */
+      color: #fff;
+    }
+
+    /* Call to action bar at the very top */
+    .cta-bar {
+      background-color: #2E9DF7; /* Blue */
+      color: #fff;
+      text-align: center;
+      padding: 12px 8px;
+      font-size: 1.05rem;
+      font-family: 'Proxima Nova', Montserrat, Arial, sans-serif;
+      letter-spacing: 0.5px;
+    }
+
+    /* Logo in the top left corner of the landing page */
+    .logo-bar {
+      display: flex;
+      align-items: center;
+      padding: 10px 0 0 16px;
+      position: relative;
+      height: 56px;
+      background: transparent;
+    }
+    .logo-bar img {
+      height: 36px;
+      width: auto;
+      display: block;
+    }
+
+    /* Make the page look good on small screens */
+    @media (max-width: 600px) {
+      .container {
+        margin: 10px;
+        max-width: 100%;
+        width: 98%;
+      }
+      .image-section {
+        height: 240px; /* Make image bigger on small screens too */
+      }
+      .content-section {
+        padding: 18px 8px;
+      }
+      h1 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
-
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
-
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
-        </div>
-    </section>
-
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
+  <!-- Call to action bar at the top -->
+  <div class="cta-bar">
+    💧 100% of your donation brings clean water to people in need!
+  </div>
+  <!-- Logo at the top left corner -->
+  <div class="logo-bar">
+    <!-- Logo image -->
+    <img src="img/cw_logo-2.png" alt="charity: water logo">
+  </div>
+  <!-- Main container centers the content -->
+  <div class="container">
+    <!-- Image section at the top -->
+    <div class="image-section"></div>
+    <!-- Content section with text and button -->
+    <div class="content-section">
+      <!-- Charity brand name -->
+      <div class="brand">charity: water</div>
+      <!-- Main heading -->
+      <h1>Be Part of the Change</h1>
+      <!-- Description paragraph -->
+      <p>
+        Join a global movement where your generosity creates hope. Every donation is tracked and reported, showing the brighter future you’ve helped build.
+      </p>
+      <!-- Donate button -->
+      <a class="donate-btn" href="https://www.charitywater.org/donate" target="_blank">Donate Now</a>
+      <!-- Notes for students -->
+      <!-- 
+        NOTES:
+        - The background color of the page is light blue (#8BD1CB) to match the photo.
+        - The main container uses a yellow background (#FFC907) to stand out.
+        - The image at the top is set with background-size: contain so it is never cropped.
+        - The "charity: water" brand text is yellow to match the theme.
+        - The donate button is yellow and turns blue when hovered.
+        - All fonts use Proxima Nova if available, or Montserrat/Arial as fallback.
+        - The call to action bar and logo are at the very top of the page.
+        - All CSS uses simple properties and no advanced layout methods.
+      -->
+    </div>
+    <!-- Contact section at the bottom -->
+    <div class="contact-section" style="background-color:#2E9DF7; color:#fff; padding:28px 20px; text-align:center;">
+      <!-- Contact heading -->
+      <h2 style="margin-top:0; color:#FFC907; font-size:1.3rem;">Contact Us</h2>
+      <p style="margin:10px 0 6px 0;">Have questions or want to get involved?</p>
+      <p style="margin:6px 0;">Email: <a href="mailto:info@charitywater.org" style="color:#fff; text-decoration:underline;">info@charitywater.org</a></p>
+      <p style="margin:6px 0;">Phone: <a href="tel:+16463788800" style="color:#fff; text-decoration:underline;">(646) 378-8800</a></p>
+      <p style="margin:6px 0;">Address: 40 Worth St., Suite 330, New York, NY 10013</p>
+      <p style="margin:16px 0 0 0; font-size:0.95rem;">
+        Follow us:
+        <a href="https://twitter.com/charitywater" style="color:#FFC907; text-decoration:none; margin:0 6px;">Twitter</a>|
+        <a href="https://www.facebook.com/charitywater" style="color:#FFC907; text-decoration:none; margin:0 6px;">Facebook</a>|
+        <a href="https://www.instagram.com/charitywater/" style="color:#FFC907; text-decoration:none; margin:0 6px;">Instagram</a>
+      </p>
+    </div>
+  </div>
 </body>
 </html>
